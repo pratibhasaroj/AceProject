@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sales" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="21236a36-a2e8-47c0-8a4c-8861718909dc">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Excel"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="Country" class="java.lang.String"/>
+	<field name="Year" class="java.lang.String"/>
+	<field name="Sales" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<detail>
+		<band height="269" splitType="Stretch">
+			<textField>
+				<reportElement x="109" y="124" width="100" height="30" uuid="c4ed1bd8-abf0-41a2-a800-69fc02026111"/>
+				<textFieldExpression><![CDATA[$F{Country}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="124" width="100" height="30" uuid="aeb27889-83db-41a5-ab4d-4e9d05d77df0"/>
+				<text><![CDATA[Country]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

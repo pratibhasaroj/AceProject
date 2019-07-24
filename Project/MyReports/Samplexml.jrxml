@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Samplexml" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f7358ef3-9d38-430a-8e49-484dbb86fa2c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Samplexm.xml"/>
+	<queryString language="xPath">
+		<![CDATA[Personnel/Employee]]>
+	</queryString>
+	<field name="type" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="@type"/>
+		<fieldDescription><![CDATA[@type]]></fieldDescription>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="Name"/>
+		<fieldDescription><![CDATA[Name]]></fieldDescription>
+	</field>
+	<field name="Id" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="Id"/>
+		<fieldDescription><![CDATA[Id]]></fieldDescription>
+	</field>
+	<field name="Age" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="Age"/>
+		<fieldDescription><![CDATA[Age]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="458" splitType="Stretch">
+			<barChart>
+				<chart evaluationTime="Report">
+					<reportElement x="0" y="10" width="541" height="410" uuid="28a96570-d333-4ad1-9752-58832326d315"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{Name}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{Name}]]></categoryExpression>
+						<valueExpression><![CDATA[SUM($F{Age})]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</detail>
+</jasperReport>

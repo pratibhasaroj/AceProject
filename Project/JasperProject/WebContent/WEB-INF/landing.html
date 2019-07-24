@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script>
+function myFunction(){
+window.open("http://localhost:8081/JasperProject/");}
+function myCharts(){
+	window.open("file:///C:/Users/Pankaj%20Dharia/AppData/Local/Temp/1563916781749/report5807946131577300824.html");}
+function fun(){
+	var e = document.getElementById("Master");
+	var strUser = e.options[e.selectedIndex].value;
+	//alert(strUser)
+	if(strUser=="PDF")
+		{
+		window.open("http://localhost:8081/JasperProject/");
+
+		}
+	else if(strUser == "Salary")
+		{
+		window.open("file:///C:/Users/Pankaj%20Dharia/AppData/Local/Temp/1563916781749/report5807946131577300824.html");
+
+		}
+	else
+		{
+		window.open("file:///C:/Users/PANKAJ~1/AppData/Local/Temp/1563976253392/report4848898316228214389.html");
+
+		}
+}
+</script>
+</head>
+<body>
+<div class="w3-container w3-blue">
+  <center><h1>Welcome To Jasper Project</h1></center>
+  
+</div>
+
+<center><select id="Master">
+  <option value="PDF"> Emloyee PDF</option>
+  <option value="Salary">Employee Salary Chart</option>
+  <option value="Age">Employee Age Chart</option>  
+</select></center>
+</br></br>
+<center><button onclick="fun()">Get Reports</button></center>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+<div class="w3-container w3-teal">
+  <center><h5>Footer</h5></center>
+ 
+</div>
+</body>
+</html>
